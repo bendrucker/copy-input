@@ -32,7 +32,7 @@ CopyInput.render = function render (state, options) {
     }
   }
 
-  return Input.render(state, extend(defaults, options || {}))
+  return Input.render(state.input, extend(defaults, options || {}))
 }
 
 function copyTarget (event) {
