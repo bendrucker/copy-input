@@ -1,7 +1,7 @@
 {
   "name": "copy-input",
   "main": "index.js",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Render an input that auto-selects and copies when clicked",
   "license": "MIT",
   "repository": "bendrucker/copy-input",
