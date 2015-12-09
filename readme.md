@@ -16,11 +16,12 @@ $ npm install --save copy-input
 var CopyInput = require('copy-input')
 
 var state = CopyInput()
-CopyInput.render(state, {
+var options = {
   style: {
     background: 'blue'
   }
-})
+}
+CopyInput.render(state, options, 'copy me!')
 //=> ...
 //=> renders readonly input that copies itself when clicked
 ```
@@ -29,9 +30,9 @@ CopyInput.render(state, {
 
 #### `CopyInput()` -> `function`
 
-Returns an observable value representation (`state`). `state.input.value()` is the displayed input value.
+Returns an observable value representation (`state`).
 
-#### `CopyInput.render(state)` -> `object`
+#### `CopyInput.render(state, options, content)` -> `object`
 
 Renders the copy input to a vtree.
 

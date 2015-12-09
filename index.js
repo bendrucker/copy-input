@@ -1,8 +1,8 @@
 'use strict'
 
 var State = require('dover')
-var Input = require('base-input')()
 var Event = require('weakmap-event')
+var h = require('virtual-dom/h')
 var clickEvent = require('value-event/click')
 var extend = require('xtend')
 var copy = require('command-copy')
@@ -11,7 +11,6 @@ module.exports = CopyInput
 
 function CopyInput () {
   return State({
-    input: Input(),
     channels: {
       click: ClickEvent.broadcast
     }
@@ -21,7 +20,7 @@ function CopyInput () {
 var ClickEvent = Event()
 CopyInput.onClick = ClickEvent.listen
 
-CopyInput.render = function render (state, options) {
+CopyInput.render = function render (state, options, content) {
   var defaults = {
     'ev-click': [
       copyTarget,
@@ -32,7 +31,7 @@ CopyInput.render = function render (state, options) {
     }
   }
 
-  return Input.render(state.input, extend(defaults, options || {}))
+  return h('input', extend(defaults, options || {}), content)
 }
 
 function copyTarget (event) {
