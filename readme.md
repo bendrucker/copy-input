@@ -19,11 +19,12 @@ var state = CopyInput()
 var options = {
   style: {
     background: 'blue'
-  }
+  },
+  value: 'copy me!'
 }
-CopyInput.render(state, options, 'copy me!')
+CopyInput.render(state, options)
 //=> ...
-//=> renders readonly input that copies itself when clicked
+//=> renders blue readonly input that copies itself when clicked
 ```
 
 ## API
@@ -32,9 +33,9 @@ CopyInput.render(state, options, 'copy me!')
 
 Returns an observable value representation (`state`).
 
-#### `CopyInput.render(state, options, content)` -> `object`
+#### `CopyInput.render(state, options)` -> `object`
 
-Renders the copy input to a vtree.
+Renders the copy input to a vtree. `options.value` is displayed in the input field.
 
 
 ## License

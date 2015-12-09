@@ -20,7 +20,7 @@ function CopyInput () {
 var ClickEvent = Event()
 CopyInput.onClick = ClickEvent.listen
 
-CopyInput.render = function render (state, options, content) {
+CopyInput.render = function render (state, options) {
   var defaults = {
     'ev-click': [
       copyTarget,
@@ -31,7 +31,7 @@ CopyInput.render = function render (state, options, content) {
     }
   }
 
-  return h('input', extend(defaults, options || {}), content)
+  return h('input', extend(defaults, options || {}))
 }
 
 function copyTarget (event) {
