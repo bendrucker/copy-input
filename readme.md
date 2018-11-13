@@ -1,4 +1,4 @@
-# copy-input [![Build Status](https://travis-ci.org/bendrucker/copy-input.svg?branch=master)](https://travis-ci.org/bendrucker/copy-input)
+# copy-input [![Build Status](https://travis-ci.org/bendrucker/copy-input.svg?branch=master)](https://travis-ci.org/bendrucker/copy-input) [![Greenkeeper badge](https://badges.greenkeeper.io/bendrucker/copy-input.svg)](https://greenkeeper.io/)
 
 > Render an input that auto-selects and copies when clicked
 
